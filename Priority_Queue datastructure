@@ -22,7 +22,13 @@ return 0;
 return pq[0];
 }
 
+void Insert(int element){
+pq.pushback(element);
 
+int childindex=pq.size()-1;
+int parent=(childIndex-1)/2;
+if(pq[childindex]<pq.[parentindex]){
+swap(pq[childindex],pq.[parentindex])
 }
 
 
