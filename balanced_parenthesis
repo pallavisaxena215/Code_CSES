@@ -1,0 +1,35 @@
+#include<string>
+class Solution {
+public:
+    bool isValid(string s) {
+    stack<char> st;
+    int n= str.length();
+    
+    if(n%2==1)
+    return false;
+    
+    for(int i=0;i<n;i++){
+    if(str[i]=='(' || str[i]=='[' || str[i]=='{')
+      st.push(s[i]);
+    
+    if(str[i]==')' && st.top!='('){
+     st.pop();
+     return false;
+     }
+    
+   if(str[i]=='}' && st.top!='{')
+     {
+     st.pop();
+     return false;
+     }
+     
+     if(str[i]==']' && st.top!='[')
+    {
+     st.pop();
+     return false;
+     }
+    
+    }
+    
+    return true;
+    }
