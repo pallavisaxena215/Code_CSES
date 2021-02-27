@@ -1,0 +1,35 @@
+
+int maxProfit(int* a, int n){
+    int j;
+    int max=0,diff=0;
+    for(int i=0;i<n;i++){
+        for(j=i+1;j<n;j++){
+            
+            if(a[j]>a[i])
+                diff=a[j]-a[i];
+            if(diff>max)
+                max=diff;
+        }
+    }
+ return max;
+}
+
+
+
+//ONE PASS CODE
+
+int maxProfit(int* a, int n){
+    int j;
+    int min=a[0],profit=0;
+    for(int i=0;i<n;i++){
+        
+        if(a[i]<min){
+            min=a[i];
+        }
+        
+        if((a[i]-min)> profit)
+            profit=(a[i]-min);
+       
+    }
+ return profit;
+}
