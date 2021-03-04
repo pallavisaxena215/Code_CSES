@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+class Edge{
+public:
+int src, des, cost;
+}
+
+class Graph{
+int V,E; // V= no.of vertices
+//E=no.of edges
+
+Edge *edge
+}
+
+Graph* creategraph(int v, int e)
+{
+Graph *graph= new Graph;
+ graph->V= v;
+ graph->E= e;
+ 
+ graph->edge = new Edge[e];
+ }
+ 
+ 
+ class Subset{
+ public:
+ int parent;
+ int rank;
+ }
+ 
+ int find(Subset subset[], int x)
+ //A utility function to find the subset of element x
